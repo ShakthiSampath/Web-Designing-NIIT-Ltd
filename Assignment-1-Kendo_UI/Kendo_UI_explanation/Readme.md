@@ -1,6 +1,6 @@
 # _**Contents of Presentation**_
-
-### Kendo UI :
+<hr>
+## **Kendo UI :**
 - Introduction
 - Features
 - How is it _better_ than Others?
