@@ -22,3 +22,10 @@
 - Working with data _Offline_ and _Online_
 - Integrated _Angular JS_
 - All Top _Browser Support_
+
+#### How is it _Better_ than Others?
+- Favorable for _JQuery_ Developers
+- Very _Less_ External Dependency
+- Better way than adding Libraries
+- Guaranteed _Updates_
+- Many Features and Widgets available 
