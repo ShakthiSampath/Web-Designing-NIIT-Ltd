@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ 
+    <base href="http://demos.telerik.com/kendo-ui/styling/index">
+    <style>html { font-size: 14px; font-family: Arial, Helvetica, sans-serif; }</style>
+    <title></title>
+    <link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.1.412/styles/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.1.412/styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.1.412/styles/kendo.mobile.all.min.css" />
+
+    <script src="//kendo.cdn.telerik.com/2016.1.412/js/jquery.min.js"></script>
+    <script src="//kendo.cdn.telerik.com/2016.1.412/js/kendo.all.min.js"></script>
+ </head>
+<body>
+
+
+<div id="forms" data-role="view" data-title="Form Elements" data-init="initForm" data-use-native-scrolling="true">
+            
+       <input type="submit" name="submit" value="Pic upload" class="km-thumbnail" style="width: 10em; height: 10em; margin: 1em auto; display: block; float: none;" required/>
+	   
+        <ul data-role="listview" data-style="inset">
+            <li>
+                <label class="km-required km-label-above">First Name
+                    <input type="text" required validationMessage="Enter{0}";/>
+                </label>
+            </li>
+            <li>
+                <label class="km-label-above">Last Name
+                    <input type="text" />
+                </label>
+            </li>
+            <li>
+                <label class="km-label-above">Company
+                    <input type="text" />
+                </label>
+            </li>
+            <li>
+                <fieldset>
+                    <legend>+ Phone</a></legend>
+                        <label class="km-inline-field km-label-above km-required" style="width: 200px;">
+                        Phone Number
+                        <input type="text" value="" />
+                        </label>
+                        <label class="km-inline-field km-label-above" style="width: 200px;">
+                            Type
+                            <select id="phone-type">
+                                <option value="First Option">Mobile</option>
+                                <option value="Second Option">Land Line</option>
+                            </select>
+                        </label>  
+                </fieldset>                   
+            </li>
+            <li>
+                <fieldset>
+                    <legend>+ Email</a></legend>
+                    <input type="text" value="example@email.com" />
+                </fieldset>
+            </li>
+			<li>
+			
+			<form action="C:\Users\S.Shakthi\Desktop\shakthi material\NIIT STUDY materials\semesters\ET401\kendo UI\forms\final form\Submitted.html">
+             <input type="submit" class="k-button k-primary" value="Submit" onclick="location.href = '/Submitted.html';">
+            </form>
+			
+            </li> 
+        </ul>
+    
+</div>
+
+<script>
+    var app = new kendo.mobile.Application(document.body, { skin: "nova" });
+</script>
+</body>
+</html>

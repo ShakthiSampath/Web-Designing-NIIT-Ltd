@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <h1><u>Registration Form</u></h1>
+    <base href="http://demos.telerik.com/kendo-ui/validator/index">
+    <style>html { font-size: 14px; font-family: Arial, Helvetica, sans-serif; }</style>
+    <title></title>
+    <link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.1.412/styles/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.1.412/styles/kendo.material.min.css" />
+	<link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.1.412/styles/kendo.mobile.all.min.css" />
+
+    <script src="//kendo.cdn.telerik.com/2016.1.412/js/jquery.min.js"></script>
+    <script src="//kendo.cdn.telerik.com/2016.1.412/js/kendo.all.min.js"></script>
+</head>
+<body>
+<script language="javaScript">
+{
+ function validateform()
+ {
+   var x = document.forms["new_form"].value;
+    if (x == null)
+	{
+        alert("Fill the form");
+        return false;
+    }
+ }
+}
+</script>
+        <div id="example">
+        <div class="demo-section k-content">
+        <div id="tickets">
+            <form id="ticketsForm" action="C:\Users\S.Shakthi\Desktop\shakthi material\NIIT STUDY materials\semesters\ET401\kendo UI\forms\final form\Submitted.html" onsubmit="return validateForm()" method="post">
+			<ul id="fieldlist">
+                    <li>
+                        <label for="First Name" class="required">First Name</label>
+                        <input type="text" id="First_Name" name="First_Name" class="k-textbox" placeholder="First Name" required validationMessage="Enter {0}" style="width: 220px;" />
+                    </li>
+                    <li>
+                        <label for="Second Name" class="required">Second Name</label>
+                        <input type="text" id="Second_Name" name="Second_Name" required validationMessage="Enter {0}" class="k-textbox" placeholder="Second Name" style="width: 220px;" /><span class="k-invalid-msg" data-for="search"></span>
+                    </li>
+                    <li>
+                        <label for="email" class="required">+Email</label>
+                        <input type="email" id="email" name="Email" class="k-textbox" placeholder="e.g. myname@example.net"  required data-email-msg="Email format is not valid"  style="width: 220px;"/>
+                    </li>
+                    <li>
+                        <label for="tel" class="required">+Phone</label>
+                        <input type="tel" id="tel" name="tel" class="k-textbox" pattern="\d{10}" placeholder="Enter a ten digit number" required
+                            validationMessage="Enter at least ten digits" style="width: 220px;" />
+                    </li>
+                    <li class="accept">
+                        <label>Terms of Service</label>
+                        <input type="checkbox" name="Accept" required validationMessage="Acceptance is required" /> <p>I accept the terms of service.</p>
+                    </li>
+                    <li class="confirm">
+                        <button class="k-button k-primary" type="submit">Submit</button>
+                    </li>
+                    <li class="status">
+                    </li>
+                </ul>
+            </form>
+        </div>
+        </div>
+
+            <style>
+                #fieldlist 
+				{
+                    margin: 0;
+                    padding: 0;
+                }
+
+                #fieldlist li 
+				{
+                    list-style: none;
+                    padding-bottom: .7em;
+                    text-align: left;
+                }
+
+                #fieldlist label 
+				{
+                    display: block;
+                    padding-bottom: .3em;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    color: #444;
+                }
+
+                #fieldlist li.status
+				{
+                    text-align: center;
+                }
+
+                #fieldlist li .k-widget:not(.k-tooltip),
+                #fieldlist li .k-textbox
+				{
+                    margin: 0 5px 5px 0;
+                }
+
+                .confirm 
+				{
+                    padding-top: 1em;
+                }
+
+                .valid
+				{
+                    color: green;
+                }
+
+                .invalid 
+				{
+                    color: red;
+                }
+
+                #fieldlist li input[type="checkbox"] 
+				{
+                    margin: 0 5px 0 0;
+                }
+
+                span.k-widget.k-tooltip-validation 
+				{
+                    display; inline-block;
+                    width: 160px;
+                    text-align: left;
+                    border: 0;
+                    padding: 0;
+                    margin: 0;
+                    background: none;
+                    box-shadow: none;
+                    color: red;
+                }
+
+                .k-tooltip-validation .k-warning
+				{
+                    display: none;
+                }
+            </style>
+            <script>
+			        $(document).ready(function() {
+                    $("#amount").kendoNumericTextBox();
+
+                    var validator = $("#ticketsForm").kendoValidator().data("kendoValidator"),
+                    status = $(".status");
+
+                    $("form").submit(function(event) {
+                        event.preventDefault();
+                        if (validator.validate()) 
+						{
+                            status.text("Your Form has been Submitted!!")
+                                .removeClass("invalid")
+                                .addClass("valid");
+                        } 
+						else 
+						{
+                            status.text("Oops! There is invalid data in the form.")
+                                .removeClass("valid")
+                                .addClass("invalid");
+                        }
+						}
+						}
+            </script>
+        </div>
+</body>
+</html>
