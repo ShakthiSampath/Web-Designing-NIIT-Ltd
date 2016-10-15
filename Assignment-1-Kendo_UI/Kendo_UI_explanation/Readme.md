@@ -1,5 +1,5 @@
 # _**Contents of Presentation**_
-<hr>
+
 ## **Kendo UI :**
 - Introduction
 - Features
@@ -28,4 +28,24 @@
 - Very _Less_ External Dependency
 - Better way than adding Libraries
 - Guaranteed _Updates_
-- Many Features and Widgets available 
+- Many Features and Widgets available
+
+#### Websites Built on _Kendo UI_
+-         https://suite.seozoom.it/
+-         https://aligntoday.com/
+-         https://demos.telerik.com
+-         https://docs.telerik.com
+-         https://pharm24.moosend.com
+-         https://dinero.com
+-         https://googleapps.insight.ly
+-         https://hotslog.com
+-         https://crm.int.godaddy.com
+-         https://themoviedb.org
+-         https://suite.seozoom.it
+-         https://loginteamviewer.com
+
+#### _Limitations_ of using Kendo UI Framework
+- Documentation of the Framework becomes difficult
+- _Bindings_ are not _JavaScript_
+- Kendo does not mangle the _DOM_
+- Mainly Kendo is _not Open Source_
