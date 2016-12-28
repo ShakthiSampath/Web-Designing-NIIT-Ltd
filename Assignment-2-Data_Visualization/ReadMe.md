@@ -25,4 +25,7 @@ House](http://www.nytimes.com/interactive/2012/11/02/us/politics/paths-to-the-wh
 Movement](http://www.nytimes.com/interactive/2012/11/11/sunday-review/counties-moving.html)
 
 - [Constellations of Directors
-and Their Stars](http://www.nytimes.com/newsgraphics/2013/09/07/director-star-chart/)
+and Their
+Stars](http://www.nytimes.com/newsgraphics/2013/09/07/director-star-chart/)
+
+### **_Overview of Assignment_** :
