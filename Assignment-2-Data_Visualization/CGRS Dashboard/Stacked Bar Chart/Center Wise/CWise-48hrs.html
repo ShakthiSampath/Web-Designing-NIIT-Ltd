@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.bar {
+  fill: steelblue;
+}
+
+.axis path {
+  display: none;
+}
+
+.header {
+  font-family: Comic Sans MS;
+  color: black;
+  margin-left: 70px;
+  margin-top: 20px;
+}
+
+</style>
+<meta charset="utf-8">
+</head>
+
+<body>
+<h5 class="header">Center Type Wise Response SLA -48 Hrs</h5>
+<svg width="500" height="400"></svg>
+
+<!--<script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/14ABCDB9-8438-8347-9DE1-E16F5321BF3E/main.js" charset="UTF-8"></script>
+
+<link rel="stylesheet" crossorigin="anonymous" href="http://gc.kis.v2.scr.kaspersky-labs.com/E3FB1235F61E-1ED9-7438-8348-9BDCBA41/abn/main.css"/>-->
+
+<script src="//d3js.org/d3.v4.min.js"></script>
+
+<script src="Libraries_Used\d3.min.js"></script>
+
+<!--   Center Type Wise Response SLA -48 Hrs    -->
+
+
+<script>
+
+    var svg = d3.select("svg"),
+        margin = {top:40, right:20, bottom:30, left:60},
+        width = +svg.attr("width")-margin.left-margin.right-100,
+        height = +svg.attr("height")-margin.top-margin.bottom,
+        h=+svg.attr("height")-margin.top-margin.bottom+10,
+        g = svg.append("g").attr("transform", "translate (" + margin.left + "," + margin.top + ")");
+
+    var x = d3.scaleBand()
+                .rangeRound([0, width])
+                .padding(0.3)
+                .align(0.7);
+
+    var y = d3.scaleLinear()
+                .rangeRound([height, 0]);
+
+    var z = d3.scaleOrdinal()
+                .range(["#128b00", "#129cdd", "#1a3b69", "#fcb441", "#ff0000"]);
+
+    var axisX =d3.axisBottom()
+                    .ticks(3)
+                    .scale(x);
+
+    var stack = d3.stack();
+
+    d3.csv("Center Type Wise Response SLA -48 Hrs.csv", type, function(error, data){
+
+        //data.sort(function(a, b) { return b.total - a.total; });
+
+        x.domain(data.map(function(d){ return d.typ; }));
+        y.domain([0, d3.max(data, function(d){ return d.total; })]).nice();
+        z.domain(data.columns.slice(1));
+
+        g.selectAll(".serie")
+            .data(stack.keys(data.columns.slice(1))(data))
+            .enter()
+            .append("g")
+                .attr("class", "serie")
+                .attr("fill", function(d){ return z(d.key); })
+            .selectAll("rect")
+            .data(function(d){ return d; })
+            .enter()
+            .append("rect")
+                .attr("x", function(d){ return x(d.data.typ); })
+                .attr("y", function(d){ return y(d[1]); })
+                .attr("height", function(d){ return y(d[0])-y(d[1]); })
+                .attr("width", x.bandwidth())
+                .on("mouseover", function() { tooltip.style("display", null); })
+              .on("mouseout", function() { tooltip.style("display", "none"); })
+              .on("mousemove", function(d) {
+                var xPosition = d3.mouse(this)[0] - 15;
+                var yPosition = d3.mouse(this)[1] - 25;
+                tooltip.attr("transform", "translate(" + xPosition + "," + yPosition + ")");
+                tooltip.select("text").text(y(d[0])-y(d[1]));
+              });
+
+
+            g.append("g")
+                //.attr("class", "axis axis--x")
+                .attr("transform", "translate(0," + h  + ")")
+                .attr("stroke-width", 2)
+                .call(axisX);
+
+            g.append("g")
+              //.attr("class", "axis axis--y")
+              //.attr("transform", "translate(-30, 0")
+              .attr("stroke-width", 2)
+              .call(d3.axisLeft(y).ticks(5, "s"))
+            .append("text")
+              .attr("x", 2)
+              .attr("y", y(y.ticks(10).pop()))
+              .attr("dy", "0.35em")
+              .attr("text-anchor", "start")
+              .attr("fill", "#000")
+
+              var legend = g.selectAll(".legend")
+                .data(data.columns.slice(1).reverse())
+                .enter().append("g")
+                  .attr("class", "legend")
+                  .attr("transform", function(d, i) { return "translate(100," + i * 20 + ")"; })
+                  .style("font", "10px Comic Sans MS");
+
+              legend.append("rect")
+                  .attr("x", width - 18)
+                  .attr("width", 18)
+                  .attr("height", 18)
+                  .attr("fill", z);
+
+              legend.append("text")
+                  .attr("x", width - 24)
+                  .attr("y", 9)
+                  .attr("dy", ".35em")
+                  .attr("text-anchor", "end")
+                  .text(function(d) { return d; });
+
+
+            var tooltip = svg.append("g")
+                              .attr("class", "tooltip")
+                              .style("display", "none");
+
+                            tooltip.append("rect")
+                              .attr("width", 30)
+                              .attr("height", 20)
+                              .attr("fill", "white")
+                              .style("opacity", 0.5);
+
+                            tooltip.append("text")
+                              .attr("x", 15)
+                              .attr("dy", "1.2em")
+                              .style("font-family", "Comic Sans MS")
+                              .attr("font-size", "12px")
+                              .attr("font-weight", "bold");
+
+    });
+
+    function type(d, i, columns) {
+      for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
+      d.total = t;
+      return d;
+    }
+
+</script>
+</body>
+</html>
