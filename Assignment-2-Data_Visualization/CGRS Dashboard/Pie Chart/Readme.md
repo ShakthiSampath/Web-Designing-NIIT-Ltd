@@ -1,4 +1,9 @@
 # **_Pie Chart_**
 
-The Pie Chart Component of the CGRS Dashboard is Complete and Describes Various
-Activities of the Institution.
+The _Pie Chart Component_ of the _CGRS Dashboard_ is _Complete_
+and Describes _Various Activities of the Institution_.
+
+#### _Progress_:
+
+_Pie Chart_ Component is _Complete_. Still needs to be integrated with the
+_Final Dashboard_.
