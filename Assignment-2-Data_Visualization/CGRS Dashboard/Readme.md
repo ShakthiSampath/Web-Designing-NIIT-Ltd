@@ -2,12 +2,12 @@
 
 ### _Explanation_:
 
-Various Region Wise And Center Wise Details have been provided for which a
-Dashboard is to be made named CGRS Dashboard.
+Various _Region Wise_ And _Center Wise_ Details have been provided for which a
+Dashboard is to be made named _CGRS Dashboard_.
 
-A Screenshot of the Work Done:
+A _Screenshot_ of the Work Done:
 
-As the Work on this Dashboard is in progress, hence every component has been
-added separately.
-To give a basic idea of how every component is, a presentation in form of
-.pptx file has been added.
+As the Work on this Dashboard is _in progress_, hence every _component_ has been
+added _separately_.
+To give a basic idea of how every component is, a _presentation_ in form of
+_.pptx file_ has been added.
