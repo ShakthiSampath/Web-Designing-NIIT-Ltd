@@ -14,7 +14,7 @@ This is a Simple _Dashboard_ which consists _Placement details_(Dummy Data)
 7. _Biotechnology Engineering_
 
 
-![image](https://github.com/ShakthiSampath/Web-Designing-NIIT-Ltd/blob/Assignment_2/Assignment-2-Data_Visualization/Placement%20Dashboard/Screenshots/1.png "Placement Dashboard")
+![image]( "Placement Dashboard")
 
 
 When _Hovered_ over the _Pie Chart_ over a particular _Branch_ it shows the
