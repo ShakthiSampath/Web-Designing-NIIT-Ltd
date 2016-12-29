@@ -15,7 +15,7 @@ This is a Simple _Dashboard_ which consists _Placement details_(Dummy Data)
 
 A Screenshot of Work Done:
 
-![image]( "Placement Dashboard")
+![image](https://github.com/ShakthiSampath/Web-Designing-NIIT-Ltd/blob/master/Assignment-2-Data_Visualization/Placement%20Dashboard/Screenshots/1.png "Placement Dashboard")
 
 
 When _Hovered_ over the _Pie Chart_ over a particular _Branch_ it shows the
