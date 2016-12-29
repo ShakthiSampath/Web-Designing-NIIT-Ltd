@@ -29,3 +29,7 @@ and Their
 Stars](http://www.nytimes.com/newsgraphics/2013/09/07/director-star-chart/)
 
 ### **_Overview of Assignment_** :
+
+1. Simple Placement Dashboard
+2. CGRS Dashboard (On Given Data)
+3. Presentation on CGRS Dashboard
