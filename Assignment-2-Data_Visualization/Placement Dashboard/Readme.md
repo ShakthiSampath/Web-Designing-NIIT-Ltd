@@ -22,3 +22,5 @@ _total percentage_ of students of that branch who were _placed_.
 
 And when _Clicked_ on a Branch it would _update_ the _number of students_
 placed from that _branch_ in _five consecutive years_ through the Bar Chart.
+
+Also a Zipped Directory has been added for Convenience.
