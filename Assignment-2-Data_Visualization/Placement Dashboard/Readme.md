@@ -2,8 +2,8 @@
 
 ### _Explanation_:
 
-This is a Simple _Dashboard_ which consists _Placement details_ of a random
-_Engineering University_ consisting of _seven_ branches Namely:
+This is a Simple _Dashboard_ which consists _Placement details_(Dummy Data)
+ of a random _Engineering University_ consisting of _seven_ branches Namely:
 
 1. _Computer Science Engineering_
 2. _Information Technology_
@@ -14,3 +14,9 @@ _Engineering University_ consisting of _seven_ branches Namely:
 7. _Biotechnology Engineering_
 
 ![image]( "Placement Dashboard")
+
+When _Hovered_ over the _Pie Chart_ over a particular _Branch_ it shows the
+_total percentage_ of students of that branch who were _placed_.
+
+And when _Clicked_ on a Branch it would _update_ the _number of students_
+placed from that _branch_ in _five consecutive years_.
