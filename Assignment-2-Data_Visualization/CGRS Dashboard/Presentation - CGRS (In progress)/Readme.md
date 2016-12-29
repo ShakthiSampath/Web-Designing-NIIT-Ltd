@@ -1,4 +1,4 @@
 # **_Presentation Component Wise_**
 
-Every Component has been separately placed in the presentation to show how
-every component looks like. The File Format is .pptx file.
+Every _Component_ has been _separately placed_ in the presentation to show how
+every component looks like. The File Format is _.pptx file_.
