@@ -1,14 +1,14 @@
 # **_Stacked Bar Charts_**
 
-This Directory Consists of Stacked Bar Charts Component both Center Wise as
-well as Region Wise.
+This Directory Consists of _Stacked Bar Charts_ Component both _Center Wise_ as
+well as _Region Wise_.
 
-The Region Wise is further branched into:
-- UNC
-- OWN
-- NWC
+The Region Wise is further _branched_ into:
+- _UNC_
+- _OWN_
+- _NWC_
 
 #### _Progress_:
 
-Center Wise Charts have been made while Region Wise Stacked bar charts are
-in Progress.
+_Center Wise Charts_ are _Complete_ while _Region Wise Stacked bar charts_ are
+_in Progress_.
