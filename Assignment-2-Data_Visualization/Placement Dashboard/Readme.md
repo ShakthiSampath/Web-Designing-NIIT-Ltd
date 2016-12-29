@@ -13,7 +13,7 @@ This is a Simple _Dashboard_ which consists _Placement details_(Dummy Data)
 6. _Civil Engineering_
 7. _Biotechnology Engineering_
 
-![image]( "Placement Dashboard")
+![image](https://github.com/ShakthiSampath/Web-Designing-NIIT-Ltd/blob/Assignment_2/Assignment-2-Data_Visualization/Placement%20Dashboard/Screenshots/1.png "Placement Dashboard")
 
 When _Hovered_ over the _Pie Chart_ over a particular _Branch_ it shows the
 _total percentage_ of students of that branch who were _placed_.
