@@ -1,0 +1,161 @@
+<html>
+<head></head>
+<body>
+
+<div id="pieChart"></div>
+
+<script src="d3/d31.min.js"></script>
+<script src="d3/d3pie.min.js"></script>
+<script>
+var pie = new d3pie("pieChart", {
+	"header": {
+		"title": {
+			"text": "All",
+			"fontSize": 22,
+			"font": "verdana"
+		},
+		"subtitle": {
+			"color": "#999999",
+			"fontSize": 10,
+			"font": "verdana"
+		},
+		"titleSubtitlePadding": 12
+	},
+	"footer": {
+		"text": "PIE CHART",
+		"color": "#999999",
+		"fontSize": 11,
+		"font": "open sans",
+		"location": "bottom-center"
+	},
+	"size": {
+		"canvasHeight": 400,
+		"canvasWidth": 590,
+		"pieOuterRadius": "88%"
+	},
+	"data": {
+		"content": [
+			{
+				"label": "Certificate",
+				"value": 86,
+				"color": "#e61515"
+			},
+			{
+				"label": "Admission",
+				"value": 8,
+				"color": "#eb9c0e"
+			},
+			{
+				"label": "Fee Issue",
+				"value": 5,
+				"color": "#969a0f"
+			},
+			{
+				"label": "Others",
+				"value": 27,
+				"color": "#53951c"
+			},
+			{
+				"label": "Professional Practice",
+				"value": 8,
+				"color": "#3cc054"
+			},
+			{
+				"label": "Staff",
+				"value": 12,
+				"color": "#61d2b2"
+			},
+			{
+				"label": "Transfer",
+				"value": 16,
+				"color": "#086e97"
+			},
+			{
+				"label": "Courseware",
+				"value": 25,
+				"color": "#dc6868"
+			},
+			{
+				"label": "Assessment",
+				"value": 8,
+				"color": "#520eb3"
+			},
+			{
+				"label": "Face to Face Delivery",
+				"value": 13,
+				"color": "#ee0e3d"
+			},
+			{
+				"label": "SLT Classes",
+				"value": 2,
+				"color": "#b84c39"
+			},
+			{
+				"label": "Downgrade",
+				"value": 21,
+				"color": "#807b7b"
+			},
+			{
+				"label": "Closed Center",
+				"value": 18,
+				"color": "#851dcd"
+			},
+			{
+				"label": "Clouding Services",
+				"value": 2,
+				"color": "#efefef"
+			}
+		]
+	},
+	"labels": {
+		"outer": {
+			"hideWhenLessThanPercentage": 1,
+			"pieDistance": 32
+		},
+		"inner": {
+			"format": "value"
+		},
+		"mainLabel": {
+			"font": "verdana"
+		},
+		"percentage": {
+			"color": "#e1e1e1",
+			"font": "verdana",
+			"decimalPlaces": 0
+		},
+		"value": {
+			"color": "#e1e1e1",
+			"font": "verdana"
+		},
+		"lines": {
+			"enabled": true,
+			"color": "#cccccc"
+		},
+		"truncation": {
+			"enabled": true
+		}
+	},
+	"tooltips": {
+		"enabled": true,
+		"type": "placeholder",
+		"string": "{label}: {value}, {percentage}%"
+	},
+	"effects": {
+		"pullOutSegmentOnClick": {
+			"effect": "linear",
+			"speed": 400,
+			"size": 8
+		}
+	},
+	"misc": {
+		"gradient": {
+			"enabled": true,
+			"percentage": 70,
+			"color": "#070505"
+		}
+	}
+});
+</script>
+
+</body>
+</html>

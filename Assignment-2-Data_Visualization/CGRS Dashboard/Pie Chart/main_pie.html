@@ -1,0 +1,130 @@
+<html>
+<head></head>
+<body>
+
+<div id="pieChart"></div>
+
+<script src="d3/d31.min.js"></script>
+<script src="d3/d3pie.min.js"></script>
+<script>
+var pie = new d3pie("pieChart", {
+	"header": {
+		"title": {
+            "text": "OWN (Own Network Centers)",
+			"fontSize": 22,
+			"font": "verdana"
+		},
+		"subtitle": {
+			"color": "#999999",
+			"fontSize": 10,
+			"font": "verdana"
+		},
+		"titleSubtitlePadding": 12
+	},
+	"footer": {
+		"text": "PIE CHART",
+		"color": "#999999",
+		"fontSize": 11,
+		"font": "open sans",
+		"location": "bottom-center"
+	},
+	"size": {
+		"canvasHeight": 400,
+		"canvasWidth": 590,
+		"pieOuterRadius": "88%"
+	},
+	"data": {
+		"content": [
+			{
+				"label": "Certificate",
+				"value": 3,
+				"color": "#e4092a"
+			},
+			{
+				"label": "Admission",
+				"value": 3,
+				"color": "#df9a1d"
+			},
+			{
+				"label": "Professional Practice",
+				"value": 1,
+				"color": "#19a93d"
+			},
+			{
+				"label": "Transfer",
+				"value": 2,
+				"color": "#25c7d7"
+			},
+			{
+				"label": "Courseware",
+				"value": 1,
+				"color": "#36c8b2"
+			},
+			{
+				"label": "Face to Face Delivery",
+				"value": 1,
+				"color": "#25cf9f"
+			},
+			{
+				"label": "Downgrade",
+				"value": 5,
+				"color": "#1d7497"
+			},
+			{
+				"label": "Closed Center",
+				"value": 1,
+				"color": "#e1294f"
+			}
+		]
+	},
+	"labels": {
+		"outer": {
+			"pieDistance": 32
+		},
+		"inner": {
+			"format": "value"
+		},
+		"mainLabel": {
+			"font": "verdana"
+		},
+		"percentage": {
+			"color": "#e1e1e1",
+			"font": "verdana",
+			"decimalPlaces": 0
+		},
+		"value": {
+			"color": "#e1e1e1",
+			"font": "verdana"
+		},
+		"lines": {
+			"enabled": true,
+			"color": "#cccccc"
+		},
+		"truncation": {
+			"enabled": true
+		}
+	},
+	"tooltips": {
+		"enabled": true,
+		"type": "placeholder",
+		"string": "{label}: {value}, {percentage}%"
+	},
+	"effects": {
+		"pullOutSegmentOnClick": {
+			"effect": "back",
+			"speed": 400,
+			"size": 8
+		}
+	},
+    "misc": {
+		"gradient": {
+			"enabled": true,
+			"percentage": 70,
+			"color": "#070505"
+		}
+	}
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bootstrap Togglable Tabs</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="d3/d31.min.js"></script>
+    <script src="d3/d3pie.min.js"></script>
+    <style>
+        .container{
+            margin-top: -70px;
+        }
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    
+
+        
+           
+                
+                    <div class="container">
+        
+        <h2>Category Wise</h2>
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="active"><a href="#about" role="tab" data-toggle="tab">ALL</a></li>
+            <li><a href="#specs" role="tab" data-toggle="tab">OWN</a></li>
+            <li><a href="#reviews" role="tab" data-toggle="tab">UNC</a></li>
+            <li><a href="#purchase" role="tab" data-toggle="tab">NWC</a></li>
+        </ul>
+        
+        <!-- Tab panes -->
+        
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="about">
+                <div id="pieChart"></div>
+                <script>
+                var pie = new d3pie("pieChart", {
+                "header": {
+                    "title": {
+                       
+                        "fontSize": 22,
+                        "font": "verdana"
+                    },
+                    "subtitle": {
+                        "color": "#999999",
+                        "fontSize": 10,
+                        "font": "verdana"
+                    },
+                    "titleSubtitlePadding": 12
+                },
+                "footer": {
+                    
+                    "color": "#999999",
+                    "fontSize": 11,
+                    "font": "open sans",
+                    "location": "bottom-center"
+                },
+                "size": {
+                    "canvasHeight": 400,
+                    "canvasWidth": 590,
+                    "pieOuterRadius": "88%"
+                },
+                "data": {
+                    "content": [
+                        {
+                            "label": "Certificate",
+                            "value": 86,
+                            "color": "#e61515"
+                        },
+                        {
+                            "label": "Admission",
+                            "value": 8,
+                            "color": "#eb9c0e"
+                        },
+                        {
+                            "label": "Fee Issue",
+                            "value": 5,
+                            "color": "#969a0f"
+                        },
+                        {
+                            "label": "Others",
+                            "value": 27,
+                            "color": "#53951c"
+                        },
+                        {
+                            "label": "Professional Practice",
+                            "value": 8,
+                            "color": "#3cc054"
+                        },
+                        {
+                            "label": "Staff",
+                            "value": 12,
+                            "color": "#61d2b2"
+                        },
+                        {
+                            "label": "Transfer",
+                            "value": 16,
+                            "color": "#086e97"
+                        },
+                        {
+                            "label": "Courseware",
+                            "value": 25,
+                            "color": "#dc6868"
+                        },
+                        {
+                            "label": "Assessment",
+                            "value": 8,
+                            "color": "#520eb3"
+                        },
+                        {
+                            "label": "Face to Face Delivery",
+                            "value": 13,
+                            "color": "#ee0e3d"
+                        },
+                        {
+                            "label": "SLT Classes",
+                            "value": 2,
+                            "color": "#b84c39"
+                        },
+                        {
+                            "label": "Downgrade",
+                            "value": 21,
+                            "color": "#807b7b"
+                        },
+                        {
+                            "label": "Closed Center",
+                            "value": 18,
+                            "color": "#851dcd"
+                        },
+                        {
+                            "label": "Clouding Services",
+                            "value": 2,
+                            "color": "#efefef"
+                        }
+                    ]
+                },
+                "labels": {
+                    "outer": {
+                        "hideWhenLessThanPercentage": 1,
+                        "pieDistance": 32
+                    },
+                    "inner": {
+                        "format": "value"
+                    },
+                    "mainLabel": {
+                        "font": "verdana"
+                    },
+                    "percentage": {
+                        "color": "#e1e1e1",
+                        "font": "verdana",
+                        "decimalPlaces": 0
+                    },
+                    "value": {
+                        "color": "#e1e1e1",
+                        "font": "verdana"
+                    },
+                    "lines": {
+                        "enabled": true,
+                        "color": "#cccccc"
+                    },
+                    "truncation": {
+                        "enabled": true
+                    }
+                },
+                "tooltips": {
+                    "enabled": true,
+                    "type": "placeholder",
+                    "string": "{label}: {value}, {percentage}%",
+                    "background": "#222"
+                },
+                "effects": {
+                    "pullOutSegmentOnClick": {
+                        "effect": "linear",
+                        "speed": 400,
+                        "size": 8
+                    }
+                },
+                "misc": {
+                    "gradient": {
+                        "enabled": true,
+                        "percentage": 70,
+                        "color": "#070505"
+                    }
+                }
+            });
+            </script>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="specs">
+                
+                <div id="pieChart1"></div>
+                <script>
+            var pie = new d3pie("pieChart1", {
+            "header": {
+                "title": {
+                    
+                    "fontSize": 22,
+                    "font": "verdana"
+                },
+                "subtitle": {
+                    "color": "#999999",
+                    "fontSize": 10,
+                    "font": "verdana"
+                },
+                "titleSubtitlePadding": 12
+            },
+            "footer": {
+                    
+                "color": "#999999",
+                "fontSize": 11,
+                "font": "open sans",
+                "location": "bottom-center"
+            },
+            "size": {
+                "canvasHeight": 400,
+                "canvasWidth": 590,
+                "pieOuterRadius": "88%"
+            },
+            "data": {
+                "content": [
+                    {
+                        "label": "Certificate",
+                        "value": 3,
+                        "color": "#e4092a"
+                    },
+                    {
+                        "label": "Admission",
+                        "value": 3,
+                        "color": "#df9a1d"
+                    },
+                    {
+                        "label": "Professional Practice",
+                        "value": 1,
+                        "color": "#19a93d"
+                    },
+                    {
+                        "label": "Transfer",
+                        "value": 2,
+                        "color": "#25c7d7"
+                    },
+                    {
+                        "label": "Courseware",
+                        "value": 1,
+                        "color": "#36c8b2"
+                    },
+                    {
+                        "label": "Face to Face Delivery",
+                        "value": 1,
+                        "color": "#25cf9f"
+                    },
+                    {
+                        "label": "Downgrade",
+                        "value": 5,
+                        "color": "#1d7497"
+                    },
+                    {
+                        "label": "Closed Center",
+                        "value": 1,
+                        "color": "#e1294f"
+                    }
+                ]
+            },
+            "labels": {
+                "outer": {
+                    "pieDistance": 32
+                },
+                "inner": {
+                    "format": "value"
+                },
+                "mainLabel": {
+                    "font": "verdana"
+                },
+                "percentage": {
+                    "color": "#e1e1e1",
+                    "font": "verdana",
+                    "decimalPlaces": 0
+                },
+                "value": {
+                    "color": "#e1e1e1",
+                    "font": "verdana"
+                },
+                "lines": {
+                    "enabled": true,
+                    "color": "#cccccc"
+                },
+                "truncation": {
+                    "enabled": true
+                }
+            },
+            "tooltips": {
+                "enabled": true,
+                "type": "placeholder",
+                "string": "{label}: {value}, {percentage}%",
+                "background": "#222"
+            },
+            "effects": {
+                "pullOutSegmentOnClick": {
+                    "effect": "back",
+                    "speed": 400,
+                    "size": 8
+                }
+            },
+            "misc": {
+                "gradient": {
+                    "enabled": true,
+                    "percentage": 70,
+                    "color": "#070505"
+                }
+            }
+        });
+        </script>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="reviews">
+                
+                <div id="pieChart2"></div>
+                <script>
+var pie = new d3pie("pieChart2", {
+	"header": {
+		"title": {
+			
+			"fontSize": 22,
+			"font": "verdana"
+		},
+		"subtitle": {
+			"color": "#999999",
+			"fontSize": 10,
+			"font": "verdana"
+		},
+		"titleSubtitlePadding": 12
+	},
+	"footer": {
+		
+		"color": "#999999",
+		"fontSize": 11,
+		"font": "open sans",
+		"location": "bottom-center"
+	},
+	"size": {
+		"canvasHeight": 400,
+		"canvasWidth": 590,
+		"pieOuterRadius": "88%"
+	},
+	"data": {
+		"content": [
+			{
+				"label": "Certificate",
+				"value": 30,
+				"color": "#e61515"
+			},
+			{
+				"label": "Admission",
+				"value": 4,
+				"color": "#eb9c0e"
+			},
+			{
+				"label": "Fee Issue",
+				"value": 4,
+				"color": "#969a0f"
+			},
+			{
+				"label": "Others",
+				"value": 11,
+				"color": "#53951c"
+			},
+			{
+				"label": "Professional Practice",
+				"value": 5,
+				"color": "#3cc054"
+			},
+			{
+				"label": "Staff",
+				"value": 2,
+				"color": "#61d2b2"
+			},
+			{
+				"label": "Transfer",
+				"value": 9,
+				"color": "#086e97"
+			},
+			{
+				"label": "Courseware",
+				"value": 6,
+				"color": "#dc6868"
+			},
+			{
+				"label": "Cloud Services",
+				"value": 2,
+				"color": "#e925ac"
+			},
+			{
+				"label": "Assessment",
+				"value": 5,
+				"color": "#520eb3"
+			},
+			{
+				"label": "Face to Face Delivery",
+				"value": 7,
+				"color": "#ee0e3d"
+			},
+			{
+				"label": "SLT Classes",
+				"value": 1,
+				"color": "#b84c39"
+			},
+			{
+				"label": "Downgrade",
+				"value": 4,
+				"color": "#807b7b"
+			},
+			{
+				"label": "Closed Center",
+				"value": 5,
+				"color": "#851dcd"
+			}
+		]
+	},
+	"labels": {
+		"outer": {
+			"hideWhenLessThanPercentage": 1,
+			"pieDistance": 32
+		},
+		"inner": {
+			"format": "value"
+		},
+		"mainLabel": {
+			"font": "verdana"
+		},
+		"percentage": {
+			"color": "#e1e1e1",
+			"font": "verdana",
+			"decimalPlaces": 0
+		},
+		"value": {
+			"color": "#e1e1e1",
+			"font": "verdana"
+		},
+		"lines": {
+			"enabled": true,
+			"color": "#cccccc"
+		},
+		"truncation": {
+			"enabled": true
+		}
+	},
+	"tooltips": {
+		"enabled": true,
+		"type": "placeholder",
+		"string": "{label}: {value}, {percentage}%",
+        "background": "#222"
+	},
+	"effects": {
+		"pullOutSegmentOnClick": {
+			"effect": "linear",
+			"speed": 400,
+			"size": 8
+		}
+	},
+	"misc": {
+		"gradient": {
+			"enabled": true,
+			"percentage": 70,
+			"color": "#070505"
+		}
+	}
+});
+</script>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="purchase">
+                
+                <div id="pieChart3"></div>
+                <script>
+var pie = new d3pie("pieChart3", {
+	"header": {
+		"title": {
+			
+			"fontSize": 22,
+			"font": "verdana"
+		},
+		"subtitle": {
+			"color": "#999999",
+			"fontSize": 10,
+			"font": "verdana"
+		},
+		"titleSubtitlePadding": 12
+	},
+	"footer": {
+		
+		"color": "#999999",
+		"fontSize": 11,
+		"font": "open sans",
+		"location": "bottom-center"
+	},
+	"size": {
+		"canvasHeight": 400,
+		"canvasWidth": 590,
+		"pieOuterRadius": "88%"
+	},
+	"data": {
+		"content": [
+			{
+				"label": "Certificate",
+				"value": 53,
+				"color": "#e61515"
+			},
+			{
+				"label": "Admission",
+				"value": 1,
+				"color": "#eb9c0e"
+			},
+			{
+				"label": "Fee Issue",
+				"value": 1,
+				"color": "#969a0f"
+			},
+			{
+				"label": "Others",
+				"value": 16,
+				"color": "#53951c"
+			},
+			{
+				"label": "Professional Practice",
+				"value": 2,
+				"color": "#3cc054"
+			},
+			{
+				"label": "Staff",
+				"value": 10,
+				"color": "#61d2b2"
+			},
+			{
+				"label": "Transfer",
+				"value": 5,
+				"color": "#086e97"
+			},
+			{
+				"label": "Courseware",
+				"value": 18,
+				"color": "#dc6868"
+			},
+			{
+				"label": "Assessment",
+				"value": 3,
+				"color": "#520eb3"
+			},
+			{
+				"label": "Face to Face Delivery",
+				"value": 5,
+				"color": "#ee0e3d"
+			},
+			{
+				"label": "SLT Classes",
+				"value": 1,
+				"color": "#b84c39"
+			},
+			{
+				"label": "Downgrade",
+				"value": 12,
+				"color": "#807b7b"
+			},
+			{
+				"label": "Closed Center",
+				"value": 12,
+				"color": "#851dcd"
+			}
+		]
+	},
+	"labels": {
+		"outer": {
+			"hideWhenLessThanPercentage": 1,
+			"pieDistance": 32
+		},
+		"inner": {
+			"format": "value"
+		},
+		"mainLabel": {
+			"font": "verdana"
+		},
+		"percentage": {
+			"color": "#e1e1e1",
+			"font": "verdana",
+			"decimalPlaces": 0
+		},
+		"value": {
+			"color": "#e1e1e1",
+			"font": "verdana"
+		},
+		"lines": {
+			"enabled": true,
+			"color": "#cccccc"
+		},
+		"truncation": {
+			"enabled": true
+		}
+	},
+	"tooltips": {
+		"enabled": true,
+		"type": "placeholder",
+		"string": "{label}: {value}, {percentage}%",
+        "background-color":"#222"
+	},
+	"effects": {
+		"pullOutSegmentOnClick": {
+			"effect": "linear",
+			"speed": 400,
+			"size": 8
+		}
+	},
+	"misc": {
+		"gradient": {
+			"enabled": true,
+			"percentage": 70,
+			"color": "#070505"
+		}
+	}
+});
+</script>
+            </div>
+        </div>
+        
+    </div><!-- container -->
+
+        
+            
+        
+
+    
+    
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
