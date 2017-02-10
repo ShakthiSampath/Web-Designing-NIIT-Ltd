@@ -93,7 +93,7 @@
                   var xPosition = d3.mouse(this)[0] - 15;
                   var yPosition = d3.mouse(this)[1] - 25;
                   tooltip.attr("transform", "translate(" + xPosition + "," + yPosition + ")");
-                  tooltip.select("text").text(y(d[0])-y(d[1]));
+                  tooltip.select("text").text((d.data.typ)+"-"+(d[1]-d[0]));
                 });
 
 
@@ -140,11 +140,11 @@
                                 .attr("class", "tooltip")
                                 .style("display", "none");
 
-                              tooltip.append("rect")
+                              /*tooltip.append("rect")
                                 .attr("width", 30)
                                 .attr("height", 20)
                                 .attr("fill", "white")
-                                .style("opacity", 0.5);
+                                .style("opacity", 0.5);*/
 
                               tooltip.append("text")
                                 .attr("x", 15)
